@@ -1,0 +1,29 @@
+Model szeba 
+{
+Path models 
+Model 0 GSZ_2.obj 
+Skin 0 gsz_diffuse.png 
+Scale 6 6 6 
+Offset 0 0 0 
+AngleOffset 0 
+
+FrameIndex 3DMD A 0 0 
+
+}
+
+
+Model szebamonster 
+{
+Path models 
+Model 0 GSZ_2.obj 
+Skin 0 difuse.jpg 
+Scale 6 6 6 
+Offset 0 0 0 
+AngleOffset 0 
+
+FrameIndex 3DMD A 0 0 
+
+}
+
+
+

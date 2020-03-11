@@ -1,0 +1,8 @@
+DoomEdNums
+{
+    11001 = szeba
+    11002 = szebamonster
+}
+
+
+
