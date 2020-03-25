@@ -100,6 +100,11 @@ namespace WindowsFormsApp5
         string modeldef_lines;
         string zscript_lines;
         string mapinfo_lines;
+        string textures_lines;
+        string materials_lines;
+        string gldefs_lines = "#include Materials.gl";
+
+        int textureMode = 0; //0-diffuse 1-normal+specular 2-PBR
 
         int DoomEdNum = 11000;
         List<string> DoomEdNums = new List<string>();
@@ -114,6 +119,8 @@ namespace WindowsFormsApp5
             string folderPath = Directory.GetParent(Application.ExecutablePath).ToString();
             string modelName = openFileDialog1.SafeFileName;
             string textureName = openFileDialog2.SafeFileName;
+
+            
 
             string ScaleX = ScaleXTextBox.Text;
             string ScaleY = ScaleYTextBox.Text;
@@ -138,6 +145,12 @@ namespace WindowsFormsApp5
             
             string mapinfoLine;
             
+
+
+
+
+            //gldefs
+
 
 
 
@@ -255,6 +268,7 @@ namespace WindowsFormsApp5
 
             System.IO.Directory.CreateDirectory(folderPath + @"\output" );
             System.IO.Directory.CreateDirectory(folderPath + @"\output\models");
+            
 
             // Creating the files
 
@@ -308,7 +322,7 @@ namespace WindowsFormsApp5
                 }
             }
 
-            /////////////////////////ZSCRIPT
+            /////////////////////////MAPINFO
 
             if (!File.Exists(@"\Mapinfo.txt")) // If file does not exists
             {
@@ -326,6 +340,8 @@ namespace WindowsFormsApp5
                     sw.WriteLine(mapinfo_lines); // Write text to .txt file
                 }
             }
+
+
 
 
 
@@ -418,7 +434,7 @@ namespace WindowsFormsApp5
 
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e) //CLEAR BUTTON
         {
             string folderPath = Directory.GetParent(Application.ExecutablePath).ToString();
 
@@ -430,6 +446,10 @@ namespace WindowsFormsApp5
             textBox4.Text = String.Empty;
             modeldef_lines = String.Empty;
             zscript_lines = String.Empty;
+            gldefs_lines = String.Empty;
+            materials_lines = String.Empty;
+            textures_lines = String.Empty;
+
             DoomEdNum = 11001;
             DoomEdNums.Clear();
 
@@ -442,5 +462,487 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            NormalSpecularTable.Enabled = !NormalSpecularTable.Enabled;
+            textureMode = 1; //0-default 1-normal+specular 2-PBR
+        }
+        //////////////////////texture definitions////////////////////////////
+        private void button5_Click(object sender, EventArgs e) //Diffuse only
+        {
+            if (diffuseDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = diffuseDialog.FileName;
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e) //diffuse(normal+specular)
+        {
+            if (diffuseDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = diffuseDialog.FileName;
+
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e) //diffuse(PBR)
+        {
+            if (diffuseDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = diffuseDialog.FileName;
+
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e) //normal(normal+specular)
+        {
+            if (normalDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = normalDialog.FileName;
+
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e) //normal(PBR)
+        {
+            if (normalDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = normalDialog.FileName;
+
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (specularDialog.ShowDialog() == DialogResult.OK) //specular
+            {
+                var fileName = specularDialog.FileName;
+
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (metallicDialog.ShowDialog() == DialogResult.OK) //metallic
+            {
+                var fileName = metallicDialog.FileName;
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (roughnessDialog.ShowDialog() == DialogResult.OK) //roughness
+            {
+                var fileName = roughnessDialog.FileName;
+
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (aoDialog.ShowDialog() == DialogResult.OK) //AO Ambient Occlusion AO
+            {
+                var fileName = aoDialog.FileName;
+
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) //default-mode
+        {
+            DiffuseTable.Enabled = !DiffuseTable.Enabled;
+            textureMode = 0; //0-default 1-normal+specular 2-PBR
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) //pbr-mode
+        {
+            PBR_Table.Enabled = !PBR_Table.Enabled;
+            textureMode = 2; //0-default 1-normal+specular 2-PBR
+        }
+
+
+        /*
+         * /////////////////////////////////////////////////////////////////////
+         * #####################################################################
+         * /////////////////////////////////////////////////////////////////////
+         * 
+         * 
+         *  TEXTURE GENERATE TEXTURE GENERATE TEXTURE GENERATE TEXTURE GENERATE
+         * 
+         * 
+         * /////////////////////////////////////////////////////////////////////
+         * #####################################################################
+         * /////////////////////////////////////////////////////////////////////
+         * 
+         * */
+
+        string texSizeY = "0";
+        string texSizeX = "0";
+
+
+        private void button14_Click(object sender, EventArgs e) //generate button at textures
+        {
+
+            ///
+            ///defining stuff
+            ///
+            string folderPath = Directory.GetParent(Application.ExecutablePath).ToString();
+
+
+            string textureName = textureNameTextBox.Text;
+
+            string diffuseName = patchNameTextBox.Text;  //diffuseDialog.SafeFileName;
+            string normalName = normalDialog.SafeFileName;
+            string specularName = specularDialog.SafeFileName; //a textúra módot csináld majd meg, nem nézi semmi a pipákat
+            string metallicName = metallicDialog.SafeFileName; //a méretmutatót csináld meg, alapméret megadót.
+            string roughnessName = roughnessDialog.SafeFileName;
+            string aoName = aoDialog.SafeFileName;
+
+            string ScaleX = TexScaleXTextBox.Text;
+            string ScaleY = TexScaleYTextBox.Text;
+
+            string SizeX = texSizeX;
+            string SizeY = texSizeY;
+
+            string specularLevel = "2.0";
+            string glossiness = "2.0";
+            ///
+
+
+            //textures file, textures_lines
+
+            textures_lines += "\r\n" +
+                "\r\n" +
+                $"Texture \"{textureName}\", {SizeX}, {SizeY} \r\n" +
+                "{\r\n" +
+                $"    XScale {ScaleX}\r\n" +
+                $"    YScale {ScaleY}\r\n" +
+                $"    Patch \"{diffuseName}\", 0, 0\r\n" +
+                "}\r\n";
+
+            if (textureMode == 1) //in case of Normal+Specular setup, write in materials.gl
+            {
+                materials_lines += "\r\n\r\n" +
+                    $"material texture {textureName}\r\n" +
+                    "{\r\n" +
+                    $"    normal materials/{normalName}\r\n" +
+                    $"    specular materials/{specularName}\r\n" +
+                    $"    specularlevel {specularLevel}\r\n" +
+                    $"    glossiness {glossiness}\r\n" +
+                    "}\r\n";
+                    
+                    
+            }
+
+            else if (textureMode == 2) //in case of PBR setup, write in materials.gl
+            {
+                materials_lines += "\r\n\r\n" +
+                    $"material texture {textureName}\r\n" +
+                    "{\r\n" +
+                    $"    normal materials/{normalName}\r\n" +
+                    $"    roughness materials/{roughnessName}\r\n" +
+                    $"    metallic materials/{metallicName}\r\n" +
+                    $"    ao materials/{aoName}\r\n" +
+                    $"    specularlevel {specularLevel}\r\n" +
+                    $"    glossiness {glossiness}\r\n" +
+                    "}\r\n";
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Creating the output folder
+
+            System.IO.Directory.CreateDirectory(folderPath + @"\output");
+            System.IO.Directory.CreateDirectory(folderPath + @"\output\patches");
+            System.IO.Directory.CreateDirectory(folderPath + @"\output\materials");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Directory.SetCurrentDirectory(folderPath + @"\output");
+
+            /////////////////////////GLDEFS
+
+            if (!File.Exists(@"\GLDefs.txt")) // If file does not exists
+            {
+                File.Create("GLDefs.txt").Close(); // Create file
+                using (StreamWriter sw = File.AppendText("GLDefs.txt"))
+                {
+                    sw.WriteLine(gldefs_lines); // Write text to .txt file
+                }
+            }
+            else // If file already exists
+            {
+                File.WriteAllText("GLDefs.txt", String.Empty); // Clear file
+                using (StreamWriter sw = File.AppendText(@"\GLDefs.txt"))
+                {
+                    sw.WriteLine(gldefs_lines); // Write text to .txt file
+                }
+            }
+
+            /////////////////////////MATERIALS
+
+            if (!File.Exists(@"\Materials.gl")) // If file does not exists
+            {
+                File.Create("Materials.gl").Close(); // Create file
+                using (StreamWriter sw = File.AppendText("Materials.gl"))
+                {
+                    sw.WriteLine(materials_lines); // Write text to .txt file
+                }
+            }
+            else // If file already exists
+            {
+                File.WriteAllText("Materials.gl", String.Empty); // Clear file
+                using (StreamWriter sw = File.AppendText(@"\Materials.gl"))
+                {
+                    sw.WriteLine(materials_lines); // Write text to .txt file
+                }
+            }
+
+            /////////////////////////TEXTURES
+
+            if (!File.Exists(@"\Textures.txt")) // If file does not exists
+            {
+                File.Create("Textures.txt").Close(); // Create file
+                using (StreamWriter sw = File.AppendText("Textures.txt"))
+                {
+                    sw.WriteLine(textures_lines); // Write text to .txt file
+                }
+            }
+            else // If file already exists
+            {
+                File.WriteAllText("Textures.txt", String.Empty); // Clear file
+                using (StreamWriter sw = File.AppendText(@"\Textures.txt"))
+                {
+                    sw.WriteLine(textures_lines); // Write text to .txt file
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+            /*
+
+                                             COPYING TEXTURE FILES
+
+    */      Directory.SetCurrentDirectory(folderPath + @"\output\patches");
+            
+            //if mode=0 default
+
+            if (textureMode == 0)
+            {
+                Directory.SetCurrentDirectory(folderPath + @"\output\patches");
+
+                try { File.Copy(diffuseDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), diffuseName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a diffuse texture first"); }
+
+            }
+
+            //if mode=1 normal+specular
+
+            if (textureMode == 1)
+            {
+                Directory.SetCurrentDirectory(folderPath + @"\output\patches");
+                try { File.Copy(diffuseDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), diffuseName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a diffuse texture first"); }
+                Directory.SetCurrentDirectory(folderPath + @"\output\materials");
+                try { File.Copy(normalDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), normalDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a normal map first"); }
+                try { File.Copy(specularDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), specularDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a specular map first"); }
+            }
+
+            //if mode=2 PBR
+
+            if (textureMode == 2)
+            {
+                Directory.SetCurrentDirectory(folderPath + @"\output\patches");
+                try { File.Copy(diffuseDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), diffuseName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a diffuse texture first"); }
+                Directory.SetCurrentDirectory(folderPath + @"\output\materials");
+                try { File.Copy(normalDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), normalDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a normal map first"); }
+                try { File.Copy(metallicDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), metallicDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a metalness map first"); }
+                try { File.Copy(roughnessDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), roughnessDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add a roughness map first"); }
+                try { File.Copy(aoDialog.FileName, Path.Combine(Directory.GetCurrentDirectory(), aoDialog.SafeFileName), true); }
+                catch (System.IO.FileNotFoundException) { MessageBox.Show("add an ambient occlusion map first"); }
+            }
+
+
+
+            TexturesTextBox.Text = textures_lines;
+            MaterialsTextBox.Text = materials_lines;
+
+
+
+
+        }
+
+
+
+
+
+        /*
+         * 
+         * ###########################################################################
+         * 
+         * 
+         *                              END OF TEXTURE GENERATION
+         * 
+         * 
+         * ###########################################################################
+         * 
+         * 
+         * */
+
+
+
+
+
+        private void diffuseDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            FileInfo file = new FileInfo(diffuseDialog.FileName);
+            var sizeInBytes = file.Length;
+
+            Bitmap img = new Bitmap(diffuseDialog.FileName);
+
+            var imageHeight = img.Height;
+            var imageWidth = img.Width;
+            
+        }
+
+        private void TexScaleXTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+            float XScale = 1f;
+            float YScale = 1f;
+            
+
+
+            try {XScale = Int32.Parse(TexScaleXTextBox.Text); }
+            catch (FormatException) { MessageBox.Show("numbers only"); }
+            try {YScale = Int32.Parse(TexScaleYTextBox.Text); }
+            catch (FormatException) { MessageBox.Show("numbers only"); }
+
+            FileInfo file = new FileInfo(diffuseDialog.FileName);
+
+
+            try { var sizeInBytes = file.Length; }
+            catch (FileNotFoundException) { }
+
+
+            try
+            {
+                Bitmap img = new Bitmap(diffuseDialog.FileName);
+
+
+                var imageHeight = img.Height;
+                var imageWidth = img.Width;
+
+                SizeLabel.Text = imageWidth / XScale + "x" + imageHeight / YScale;
+
+
+                texSizeY = imageHeight.ToString();
+                texSizeX = imageWidth.ToString();
+            }
+            catch (ArgumentException) { }
+        }
+
+        private void TexScaleYTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+            float XScale = 1f;
+            float YScale = 1f;
+
+
+
+            try { XScale = Int32.Parse(TexScaleXTextBox.Text); }
+            catch (FormatException) { MessageBox.Show("numbers only"); }
+            try { YScale = Int32.Parse(TexScaleYTextBox.Text); }
+            catch (FormatException) { MessageBox.Show("numbers only"); }
+
+            FileInfo file = new FileInfo(diffuseDialog.FileName);
+
+
+            try { var sizeInBytes = file.Length; }
+            catch (FileNotFoundException) { }
+
+
+            try
+            {
+                Bitmap img = new Bitmap(diffuseDialog.FileName);
+
+
+                var imageHeight = img.Height;
+                var imageWidth = img.Width;
+
+                SizeLabel.Text = imageWidth / XScale + "x" + imageHeight / YScale;
+
+
+                texSizeY = imageHeight.ToString();
+                texSizeX = imageWidth.ToString();
+            }
+            catch (ArgumentException) { }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+            string folderPath = Directory.GetParent(Application.ExecutablePath).ToString();
+
+            try
+            {
+                if (!File.Exists(folderPath + @"\output.pk3"))
+                {
+                    ZipFile.CreateFromDirectory(folderPath + @"\output", folderPath + @"\output.pk3");
+                }
+                else
+                {
+                    MessageBox.Show("File already exists, will be overwritten. (You can save it now before I overwrite)");
+                    File.Delete(folderPath + @"\output.pk3");
+                    ZipFile.CreateFromDirectory(folderPath + @"\output", folderPath + @"\output.pk3");
+                }
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("IOException error. Generate first, the pk3 is probably empty."); //error message
+            }
+        }
     }
 }
+
+
+

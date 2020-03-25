@@ -83,6 +83,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.inheritanceTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -92,12 +95,57 @@
             this.radiusTextBox = new System.Windows.Forms.TextBox();
             this.heightTextBox = new System.Windows.Forms.TextBox();
             this.massTextBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.inheritanceTextBox = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.mapInfoTextBox = new System.Windows.Forms.TextBox();
             this.MapinfoLabel = new System.Windows.Forms.Label();
+            this.mapInfoTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.MaterialsTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TexturesTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PBR_Table = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.DiffuseTable = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.NormalSpecularTable = new System.Windows.Forms.TableLayoutPanel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.TexScaleYTextBox = new System.Windows.Forms.TextBox();
+            this.TexScaleXTextBox = new System.Windows.Forms.TextBox();
+            this.SizeLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.diffuseDialog = new System.Windows.Forms.OpenFileDialog();
+            this.normalDialog = new System.Windows.Forms.OpenFileDialog();
+            this.specularDialog = new System.Windows.Forms.OpenFileDialog();
+            this.metallicDialog = new System.Windows.Forms.OpenFileDialog();
+            this.roughnessDialog = new System.Windows.Forms.OpenFileDialog();
+            this.aoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textureNameTextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.patchNameTextBox = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -107,6 +155,16 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.PBR_Table.SuspendLayout();
+            this.DiffuseTable.SuspendLayout();
+            this.NormalSpecularTable.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // actorName
@@ -627,6 +685,8 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -672,6 +732,47 @@
             this.tabPage2.Size = new System.Drawing.Size(792, 424);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ZScript";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "MONSTER;",
+            "PROJECTILE;",
+            "+SOLID",
+            "+SHOOTABLE",
+            "+NOBLOOD",
+            "+NOFRICTIONBOUNCE",
+            "+ACTLIKEBRIDGE",
+            "+CLIENTSIDEONLY",
+            "+NOINTERACTION",
+            "+FRIENDLY",
+            "+NOGRAVITY",
+            "-NOGRAVITY",
+            "+NOFRICTION",
+            "+RANDOMIZE"});
+            this.checkedListBox1.Location = new System.Drawing.Point(607, 6);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(165, 394);
+            this.checkedListBox1.TabIndex = 3;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // inheritanceTextBox
+            // 
+            this.inheritanceTextBox.Location = new System.Drawing.Point(73, 21);
+            this.inheritanceTextBox.Name = "inheritanceTextBox";
+            this.inheritanceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.inheritanceTextBox.TabIndex = 2;
+            this.inheritanceTextBox.Text = "Actor";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "inheritance";
             // 
             // tableLayoutPanel5
             // 
@@ -764,47 +865,6 @@
             this.massTextBox.TabIndex = 7;
             this.massTextBox.Text = "1000";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "inheritance";
-            // 
-            // inheritanceTextBox
-            // 
-            this.inheritanceTextBox.Location = new System.Drawing.Point(73, 21);
-            this.inheritanceTextBox.Name = "inheritanceTextBox";
-            this.inheritanceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.inheritanceTextBox.TabIndex = 2;
-            this.inheritanceTextBox.Text = "Actor";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "MONSTER;",
-            "PROJECTILE;",
-            "+SOLID",
-            "+SHOOTABLE",
-            "+NOBLOOD",
-            "+NOFRICTIONBOUNCE",
-            "+ACTLIKEBRIDGE",
-            "+CLIENTSIDEONLY",
-            "+NOINTERACTION",
-            "+FRIENDLY",
-            "+NOGRAVITY",
-            "-NOGRAVITY",
-            "+NOFRICTION",
-            "+RANDOMIZE"});
-            this.checkedListBox1.Location = new System.Drawing.Point(607, 6);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(165, 394);
-            this.checkedListBox1.TabIndex = 3;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -816,6 +876,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mapinfo";
             // 
+            // MapinfoLabel
+            // 
+            this.MapinfoLabel.AutoSize = true;
+            this.MapinfoLabel.Location = new System.Drawing.Point(8, 37);
+            this.MapinfoLabel.Name = "MapinfoLabel";
+            this.MapinfoLabel.Size = new System.Drawing.Size(45, 13);
+            this.MapinfoLabel.TabIndex = 1;
+            this.MapinfoLabel.Text = "Mapinfo";
+            // 
             // mapInfoTextBox
             // 
             this.mapInfoTextBox.Location = new System.Drawing.Point(8, 53);
@@ -826,14 +895,490 @@
             this.mapInfoTextBox.Size = new System.Drawing.Size(759, 363);
             this.mapInfoTextBox.TabIndex = 0;
             // 
-            // MapinfoLabel
+            // tabPage4
             // 
-            this.MapinfoLabel.AutoSize = true;
-            this.MapinfoLabel.Location = new System.Drawing.Point(8, 37);
-            this.MapinfoLabel.Name = "MapinfoLabel";
-            this.MapinfoLabel.Size = new System.Drawing.Size(45, 13);
-            this.MapinfoLabel.TabIndex = 1;
-            this.MapinfoLabel.Text = "Mapinfo";
+            this.tabPage4.BackColor = System.Drawing.Color.CadetBlue;
+            this.tabPage4.Controls.Add(this.tableLayoutPanel6);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(792, 424);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Textures";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(8, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 413F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(776, 413);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel3, 0, 1);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(391, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.405406F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.5946F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(382, 407);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Textures";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.MaterialsTextBox);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.TexturesTextBox);
+            this.panel3.Location = new System.Drawing.Point(3, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(376, 379);
+            this.panel3.TabIndex = 2;
+            // 
+            // MaterialsTextBox
+            // 
+            this.MaterialsTextBox.Location = new System.Drawing.Point(6, 199);
+            this.MaterialsTextBox.Multiline = true;
+            this.MaterialsTextBox.Name = "MaterialsTextBox";
+            this.MaterialsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.MaterialsTextBox.Size = new System.Drawing.Size(367, 177);
+            this.MaterialsTextBox.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 182);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Materials";
+            // 
+            // TexturesTextBox
+            // 
+            this.TexturesTextBox.Location = new System.Drawing.Point(3, 3);
+            this.TexturesTextBox.Multiline = true;
+            this.TexturesTextBox.Name = "TexturesTextBox";
+            this.TexturesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TexturesTextBox.Size = new System.Drawing.Size(370, 172);
+            this.TexturesTextBox.TabIndex = 0;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(382, 407);
+            this.tableLayoutPanel8.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.patchNameTextBox);
+            this.panel1.Controls.Add(this.textureNameTextBox);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.PBR_Table);
+            this.panel1.Controls.Add(this.DiffuseTable);
+            this.panel1.Controls.Add(this.NormalSpecularTable);
+            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(376, 197);
+            this.panel1.TabIndex = 0;
+            // 
+            // PBR_Table
+            // 
+            this.PBR_Table.ColumnCount = 1;
+            this.PBR_Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PBR_Table.Controls.Add(this.button9, 0, 0);
+            this.PBR_Table.Controls.Add(this.button10, 0, 1);
+            this.PBR_Table.Controls.Add(this.button11, 0, 2);
+            this.PBR_Table.Controls.Add(this.button12, 0, 3);
+            this.PBR_Table.Controls.Add(this.button13, 0, 4);
+            this.PBR_Table.Enabled = false;
+            this.PBR_Table.Location = new System.Drawing.Point(239, 45);
+            this.PBR_Table.Name = "PBR_Table";
+            this.PBR_Table.RowCount = 5;
+            this.PBR_Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PBR_Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PBR_Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PBR_Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PBR_Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PBR_Table.Size = new System.Drawing.Size(102, 149);
+            this.PBR_Table.TabIndex = 3;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(3, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 21);
+            this.button9.TabIndex = 0;
+            this.button9.Text = "Diffuse";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(3, 32);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 21);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "Normal";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(3, 61);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 21);
+            this.button11.TabIndex = 0;
+            this.button11.Text = "Metallic";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(3, 90);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 21);
+            this.button12.TabIndex = 0;
+            this.button12.Text = "Roughness";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(3, 119);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 21);
+            this.button13.TabIndex = 0;
+            this.button13.Text = "AO";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // DiffuseTable
+            // 
+            this.DiffuseTable.ColumnCount = 1;
+            this.DiffuseTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.DiffuseTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.DiffuseTable.Controls.Add(this.button5, 0, 0);
+            this.DiffuseTable.Enabled = false;
+            this.DiffuseTable.Location = new System.Drawing.Point(12, 45);
+            this.DiffuseTable.Name = "DiffuseTable";
+            this.DiffuseTable.RowCount = 1;
+            this.DiffuseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DiffuseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DiffuseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.DiffuseTable.Size = new System.Drawing.Size(102, 27);
+            this.DiffuseTable.TabIndex = 3;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 21);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Diffuse";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // NormalSpecularTable
+            // 
+            this.NormalSpecularTable.ColumnCount = 1;
+            this.NormalSpecularTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NormalSpecularTable.Controls.Add(this.button6, 0, 0);
+            this.NormalSpecularTable.Controls.Add(this.button7, 0, 1);
+            this.NormalSpecularTable.Controls.Add(this.button8, 0, 2);
+            this.NormalSpecularTable.Enabled = false;
+            this.NormalSpecularTable.Location = new System.Drawing.Point(120, 45);
+            this.NormalSpecularTable.Name = "NormalSpecularTable";
+            this.NormalSpecularTable.RowCount = 3;
+            this.NormalSpecularTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.NormalSpecularTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.NormalSpecularTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.NormalSpecularTable.Size = new System.Drawing.Size(102, 86);
+            this.NormalSpecularTable.TabIndex = 3;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(3, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 21);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Diffuse";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(3, 31);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 21);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "Normal";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(3, 59);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 21);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Specular";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(239, 22);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(47, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "PBR";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(120, 22);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(102, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "normal+specular";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(12, 22);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "default";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button15);
+            this.panel2.Controls.Add(this.button14);
+            this.panel2.Controls.Add(this.TexScaleYTextBox);
+            this.panel2.Controls.Add(this.TexScaleXTextBox);
+            this.panel2.Controls.Add(this.SizeLabel);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Location = new System.Drawing.Point(3, 206);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(376, 198);
+            this.panel2.TabIndex = 1;
+            // 
+            // TexScaleYTextBox
+            // 
+            this.TexScaleYTextBox.Location = new System.Drawing.Point(51, 37);
+            this.TexScaleYTextBox.Name = "TexScaleYTextBox";
+            this.TexScaleYTextBox.Size = new System.Drawing.Size(39, 20);
+            this.TexScaleYTextBox.TabIndex = 3;
+            this.TexScaleYTextBox.Text = "1";
+            this.TexScaleYTextBox.TextChanged += new System.EventHandler(this.TexScaleYTextBox_TextChanged);
+            // 
+            // TexScaleXTextBox
+            // 
+            this.TexScaleXTextBox.Location = new System.Drawing.Point(51, 11);
+            this.TexScaleXTextBox.Name = "TexScaleXTextBox";
+            this.TexScaleXTextBox.Size = new System.Drawing.Size(39, 20);
+            this.TexScaleXTextBox.TabIndex = 3;
+            this.TexScaleXTextBox.Text = "1";
+            this.TexScaleXTextBox.TextChanged += new System.EventHandler(this.TexScaleXTextBox_TextChanged);
+            // 
+            // SizeLabel
+            // 
+            this.SizeLabel.AutoSize = true;
+            this.SizeLabel.Location = new System.Drawing.Point(217, 86);
+            this.SizeLabel.Name = "SizeLabel";
+            this.SizeLabel.Size = new System.Drawing.Size(24, 13);
+            this.SizeLabel.TabIndex = 2;
+            this.SizeLabel.Text = "0x0";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(181, 86);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(30, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Size:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(4, 44);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "ScaleY";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(181, 44);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(134, 13);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "like big doors, are 128x128";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(181, 31);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(156, 13);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Walls are 64x128 or sometimes,";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(180, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(147, 13);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Usually Doom flats are 64x64,";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(4, 18);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "ScaleX";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(792, 424);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Animdefs";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // diffuseDialog
+            // 
+            this.diffuseDialog.FileName = "openFileDialog3";
+            this.diffuseDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.diffuseDialog_FileOk);
+            // 
+            // normalDialog
+            // 
+            this.normalDialog.FileName = "openFileDialog4";
+            // 
+            // specularDialog
+            // 
+            this.specularDialog.FileName = "openFileDialog5";
+            // 
+            // metallicDialog
+            // 
+            this.metallicDialog.FileName = "openFileDialog6";
+            // 
+            // roughnessDialog
+            // 
+            this.roughnessDialog.FileName = "openFileDialog7";
+            // 
+            // aoDialog
+            // 
+            this.aoDialog.FileName = "openFileDialog8";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(7, 172);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(169, 23);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "Generate";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(2, 163);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 26);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Texture\r\nname:";
+            // 
+            // textureNameTextBox
+            // 
+            this.textureNameTextBox.Location = new System.Drawing.Point(51, 165);
+            this.textureNameTextBox.Name = "textureNameTextBox";
+            this.textureNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.textureNameTextBox.TabIndex = 5;
+            this.textureNameTextBox.Text = "texname";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(4, 130);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(38, 26);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Patch\r\nName:\r\n";
+            // 
+            // patchNameTextBox
+            // 
+            this.patchNameTextBox.Location = new System.Drawing.Point(51, 139);
+            this.patchNameTextBox.Name = "patchNameTextBox";
+            this.patchNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.patchNameTextBox.TabIndex = 5;
+            this.patchNameTextBox.Text = "ptexname";
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(197, 172);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(176, 23);
+            this.button15.TabIndex = 16;
+            this.button15.Text = "Create PK3";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
@@ -861,6 +1406,20 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.PBR_Table.ResumeLayout(false);
+            this.DiffuseTable.ResumeLayout(false);
+            this.NormalSpecularTable.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -937,6 +1496,54 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label MapinfoLabel;
         private System.Windows.Forms.TextBox mapInfoTextBox;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox MaterialsTextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox TexturesTextBox;
+        private System.Windows.Forms.TableLayoutPanel PBR_Table;
+        private System.Windows.Forms.TableLayoutPanel DiffuseTable;
+        private System.Windows.Forms.TableLayoutPanel NormalSpecularTable;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox TexScaleYTextBox;
+        private System.Windows.Forms.TextBox TexScaleXTextBox;
+        private System.Windows.Forms.Label SizeLabel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.OpenFileDialog diffuseDialog;
+        private System.Windows.Forms.OpenFileDialog normalDialog;
+        private System.Windows.Forms.OpenFileDialog specularDialog;
+        private System.Windows.Forms.OpenFileDialog metallicDialog;
+        private System.Windows.Forms.OpenFileDialog roughnessDialog;
+        private System.Windows.Forms.OpenFileDialog aoDialog;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox textureNameTextBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox patchNameTextBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button15;
     }
 }
 
