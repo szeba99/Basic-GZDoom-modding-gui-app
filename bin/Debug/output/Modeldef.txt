@@ -1,4 +1,4 @@
-Model  
+Model asdasd 
 {
 Path models 
 Model 0 openFileDialog1 
@@ -7,12 +7,12 @@ Scale 1 1 1
 Offset 0 0 0 
 AngleOffset 0 
 
-FrameIndex 3DMD A 0 0 
+    FrameIndex 0000 A 0 0 
 
 }
 
 
-Model fax 
+Model asdasd 
 {
 Path models 
 Model 0 openFileDialog1 
@@ -21,7 +21,38 @@ Scale 1 1 1
 Offset 0 0 0 
 AngleOffset 0 
 
-FrameIndex 3DMD A 0 0 
+    FrameIndex 0000 A 0 0
+    FrameIndex 0000 B 0 1
+    FrameIndex 0000 C 0 2
+    FrameIndex 0000 D 0 3
+    FrameIndex 0000 E 0 4
+    FrameIndex 0000 F 0 5
+    FrameIndex 0000 G 0 6
+    FrameIndex 0000 H 0 7
+    FrameIndex 0000 I 0 8
+    FrameIndex 0000 J 0 9
+    FrameIndex 0000 K 0 10
+    FrameIndex 0000 L 0 11
+    FrameIndex 0000 M 0 12
+    FrameIndex 0000 N 0 13
+    FrameIndex 0000 O 0 14
+    FrameIndex 0000 P 0 15
+    FrameIndex 0000 Q 0 16
+    FrameIndex 0000 R 0 17
+    FrameIndex 0000 S 0 18
+    FrameIndex 0000 T 0 19
+    FrameIndex 0000 U 0 20
+    FrameIndex 0000 V 0 21
+    FrameIndex 0000 W 0 22
+    FrameIndex 0000 X 0 23
+    FrameIndex 0000 Y 0 24
+    FrameIndex 0000 Z 0 25
+    FrameIndex 0001 A 0 26
+    FrameIndex 0001 B 0 27
+    FrameIndex 0001 C 0 28
+    FrameIndex 0001 D 0 29
+    FrameIndex 0001 E 0 30
+ 
 
 }
 

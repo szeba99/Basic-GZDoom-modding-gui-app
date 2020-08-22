@@ -1,7 +1,6 @@
 DoomEdNums
 {
-    11001 = szeba
-    11002 = szebamonster
+    11001 = asdasd
 }
 
 

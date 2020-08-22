@@ -1,4 +1,4 @@
-class szeba : Actor 
+class asdasd : Actor 
 {
     Default
     {
@@ -16,34 +16,10 @@ class szeba : Actor
     States
     {
     Spawn:
-        3DMD A -1;
-        Stop;
+         0000 A -1;
+        Loop;
     Death:
-        3DMD A 1;
-        Stop;
-    }
-}
-
-
-
-class szebamonster : DoomImp 
-{
-    Default
-    {
-        Radius 26;
-        Height 30;
-        Health 100;
-        ProjectilePassHeight -16;
-        Mass 1000;
-        MONSTER;
-        }
-    States
-    {
-    Spawn:
-        3DMD A -1;
-        Stop;
-    Death:
-        3DMD A 1;
+        0000 A 1;
         Stop;
     }
 }

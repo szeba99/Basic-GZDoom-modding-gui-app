@@ -1,0 +1,15 @@
+Model asdasd 
+{
+Path models 
+Model 0 openFileDialog1 
+Skin 0 openFileDialog2 
+Scale 1 1 1 
+Offset 0 0 0 
+AngleOffset 0 
+
+FrameIndex 3DMD A 0 0 
+
+}
+
+
+

@@ -45,22 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Animation1 = new System.Windows.Forms.TextBox();
-            this.Animation2 = new System.Windows.Forms.TextBox();
-            this.Animation3 = new System.Windows.Forms.TextBox();
-            this.Animation4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.ScaleZTextBox = new System.Windows.Forms.TextBox();
@@ -108,6 +92,10 @@
             this.TexturesTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.patchNameTextBox = new System.Windows.Forms.TextBox();
+            this.textureNameTextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.PBR_Table = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -124,6 +112,8 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.TexScaleYTextBox = new System.Windows.Forms.TextBox();
             this.TexScaleXTextBox = new System.Windows.Forms.TextBox();
             this.SizeLabel = new System.Windows.Forms.Label();
@@ -140,13 +130,6 @@
             this.metallicDialog = new System.Windows.Forms.OpenFileDialog();
             this.roughnessDialog = new System.Windows.Forms.OpenFileDialog();
             this.aoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textureNameTextBox = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.patchNameTextBox = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -316,168 +299,6 @@
             this.button4.Text = "Create PK3";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Animation1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Animation2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Animation3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Animation4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox9, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox10, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox11, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox12, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox13, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox14, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
-            this.tableLayoutPanel1.Enabled = false;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 248);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 170);
-            this.tableLayoutPanel1.TabIndex = 16;
-            this.tableLayoutPanel1.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Animation name";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(155, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "To";
-            // 
-            // Animation1
-            // 
-            this.Animation1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Animation1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation1.Location = new System.Drawing.Point(3, 37);
-            this.Animation1.Name = "Animation1";
-            this.Animation1.Size = new System.Drawing.Size(100, 20);
-            this.Animation1.TabIndex = 3;
-            // 
-            // Animation2
-            // 
-            this.Animation2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Animation2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation2.Location = new System.Drawing.Point(3, 71);
-            this.Animation2.Name = "Animation2";
-            this.Animation2.Size = new System.Drawing.Size(100, 20);
-            this.Animation2.TabIndex = 4;
-            // 
-            // Animation3
-            // 
-            this.Animation3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Animation3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation3.Location = new System.Drawing.Point(3, 105);
-            this.Animation3.Name = "Animation3";
-            this.Animation3.Size = new System.Drawing.Size(100, 20);
-            this.Animation3.TabIndex = 5;
-            // 
-            // Animation4
-            // 
-            this.Animation4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Animation4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation4.Location = new System.Drawing.Point(3, 139);
-            this.Animation4.Name = "Animation4";
-            this.Animation4.Size = new System.Drawing.Size(100, 20);
-            this.Animation4.TabIndex = 6;
-            this.Animation4.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox7.Location = new System.Drawing.Point(109, 37);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(40, 20);
-            this.textBox7.TabIndex = 7;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox8.Location = new System.Drawing.Point(155, 37);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(40, 20);
-            this.textBox8.TabIndex = 8;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox9.Location = new System.Drawing.Point(109, 71);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(40, 20);
-            this.textBox9.TabIndex = 9;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox10.Location = new System.Drawing.Point(155, 71);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(40, 20);
-            this.textBox10.TabIndex = 10;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox11.Location = new System.Drawing.Point(109, 105);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(40, 20);
-            this.textBox11.TabIndex = 11;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox12.Location = new System.Drawing.Point(155, 105);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(40, 20);
-            this.textBox12.TabIndex = 12;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox13.Location = new System.Drawing.Point(109, 139);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(40, 20);
-            this.textBox13.TabIndex = 13;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox14.Location = new System.Drawing.Point(155, 139);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(40, 20);
-            this.textBox14.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(109, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "From";
             // 
             // tableLayoutPanel2
             // 
@@ -707,7 +528,6 @@
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.button4);
@@ -1013,6 +833,40 @@
             this.panel1.Size = new System.Drawing.Size(376, 197);
             this.panel1.TabIndex = 0;
             // 
+            // patchNameTextBox
+            // 
+            this.patchNameTextBox.Location = new System.Drawing.Point(51, 139);
+            this.patchNameTextBox.Name = "patchNameTextBox";
+            this.patchNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.patchNameTextBox.TabIndex = 5;
+            this.patchNameTextBox.Text = "ptexname";
+            // 
+            // textureNameTextBox
+            // 
+            this.textureNameTextBox.Location = new System.Drawing.Point(51, 165);
+            this.textureNameTextBox.Name = "textureNameTextBox";
+            this.textureNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.textureNameTextBox.TabIndex = 5;
+            this.textureNameTextBox.Text = "texname";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(4, 130);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(38, 26);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Patch\r\nName:\r\n";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(2, 163);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 26);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Texture\r\nname:";
+            // 
             // PBR_Table
             // 
             this.PBR_Table.ColumnCount = 1;
@@ -1211,6 +1065,26 @@
             this.panel2.Size = new System.Drawing.Size(376, 198);
             this.panel2.TabIndex = 1;
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(197, 172);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(176, 23);
+            this.button15.TabIndex = 16;
+            this.button15.Text = "Create PK3";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(7, 172);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(169, 23);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "Generate";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // TexScaleYTextBox
             // 
             this.TexScaleYTextBox.Location = new System.Drawing.Point(51, 37);
@@ -1326,60 +1200,6 @@
             // 
             this.aoDialog.FileName = "openFileDialog8";
             // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(7, 172);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(169, 23);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "Generate";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(2, 163);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 26);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "Texture\r\nname:";
-            // 
-            // textureNameTextBox
-            // 
-            this.textureNameTextBox.Location = new System.Drawing.Point(51, 165);
-            this.textureNameTextBox.Name = "textureNameTextBox";
-            this.textureNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.textureNameTextBox.TabIndex = 5;
-            this.textureNameTextBox.Text = "texname";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(4, 130);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(38, 26);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "Patch\r\nName:\r\n";
-            // 
-            // patchNameTextBox
-            // 
-            this.patchNameTextBox.Location = new System.Drawing.Point(51, 139);
-            this.patchNameTextBox.Name = "patchNameTextBox";
-            this.patchNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.patchNameTextBox.TabIndex = 5;
-            this.patchNameTextBox.Text = "ptexname";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(197, 172);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(176, 23);
-            this.button15.TabIndex = 16;
-            this.button15.Text = "Create PK3";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1389,8 +1209,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Modeldef generator for GZDoom - by Gelle Szebasztián";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1443,22 +1261,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Animation1;
-        private System.Windows.Forms.TextBox Animation2;
-        private System.Windows.Forms.TextBox Animation3;
-        private System.Windows.Forms.TextBox Animation4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox ScaleZTextBox;

@@ -1,0 +1,8 @@
+DoomEdNums
+{
+    11001 = asdasd
+    11002 = asdasd
+}
+
+
+

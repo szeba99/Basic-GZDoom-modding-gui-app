@@ -1,0 +1,7 @@
+DoomEdNums
+{
+    11001 = asdasd
+}
+
+
+
